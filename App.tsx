@@ -7,6 +7,11 @@ var width = Dimensions.get('window').width;
 var box_count = 11;
 var box_height = height / box_count;
 
+class Movie {
+	title: String;
+	year: Number;
+}
+
 export default class App extends React.Component {
 	constructor(props) {
 		super(props);
@@ -19,23 +24,21 @@ export default class App extends React.Component {
 
 	componentDidMount() {
 		fetch("https://facebook.github.io/react-native/movies.json")
-			.then(res => res.json)
+			.then(res => res.json())
 			.then(
-				(result) => {
-					alert(result.title);
-					this.setState({
-						isLoaded: true,
-						movies: result.movies
-					});
-				},
-
-				(error) => {
-					this.setState({
-						isLoaded: true,
-						error
-					});
-				}
-			);
+			(result) => {
+				this.setState({
+					isLoaded: true,
+					movies: result.movies
+				});
+			})
+			.catch((error) => {
+				alert("error");
+				this.setState({
+					isLoaded: false,
+					error
+				});
+			});
 	}
 
 	render() {
@@ -48,7 +51,7 @@ export default class App extends React.Component {
 					{this.state.movies.map(movie => (
 						<View style={styles.scrollBox}>
 							<View style={[styles.imageDummy, styles.imageRed]} />
-							<Text>movie.title</Text>
+							<Text>{movie.title}</Text>
 						</View>
 					))}
 				</ScrollView>

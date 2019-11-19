@@ -8,6 +8,10 @@ var box_count = 11;
 var box_height = height / box_count;
 
 export const styles = StyleSheet.create({
+	NavigationContainer: {
+		flex: 2
+	},
+
 	container: {
 		flex: 1,
 		flexDirection: 'column'
@@ -16,8 +20,6 @@ export const styles = StyleSheet.create({
 	header: {
 		height: box_height * 2,
 		backgroundColor: '#2196F3',
-		justifyContent: 'center',
-		alignItems: 'center',
 	},
 	headerText: {
 		fontSize: 40,
@@ -41,7 +43,7 @@ export const styles = StyleSheet.create({
 		width: width / 2,
 	},
 	imageRed: {
-		backgroundColor: 'yellow',
+		backgroundColor: 'red',
 	},
 	imageYellow: {
 		backgroundColor: 'yellow',

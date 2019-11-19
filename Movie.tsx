@@ -14,7 +14,7 @@ export class MovieView extends React.Component<Partial<NavigationInjectedProps>>
 					</View>
 					<View style={styles.body}>
 						<View style={styles.movieBox}>
-							<View style={[styles.imageDummy, styles.imageRed]}/>
+							<View style={[styles.imageDummy, styles.imageYellow]}/>
 							<Text>Released in {navigation.state.params.year}</Text>
 						</View>
 					</View>

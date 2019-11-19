@@ -6,6 +6,10 @@ import { styles } from './Styles';
 
 
 export class Home extends React.Component {
+	static navigationOptions = {
+		title: 'My Movies'
+	};
+
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -38,9 +42,6 @@ export class Home extends React.Component {
 		const {navigate} = this.props.navigation;
 
 		return <View style={styles.container}>
-			<View style={styles.header}>
-				<Text style={styles.headerText}>My Movies</Text>
-			</View>
 			<View style={styles.body}>
 				<ScrollView horizontal={true} showsHorizontalScrollIndicator={false} pagingEnabled={true}>
 					{this.state.movies.map(movie => (

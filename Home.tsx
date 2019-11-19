@@ -44,7 +44,7 @@ export class Home extends React.Component {
 			<View style={styles.body}>
 				<ScrollView horizontal={true} showsHorizontalScrollIndicator={false} pagingEnabled={true}>
 					{this.state.movies.map(movie => (
-						<View style={styles.scrollBox} key={movie.id}>
+						<View style={styles.movieBox} key={movie.id}>
 							<TouchableHighlight onPress={() => navigate('Movie', {title: movie.title, year: movie.releaseYear})}>
 								<View style={[styles.imageDummy, styles.imageRed]}/>
 							</TouchableHighlight>

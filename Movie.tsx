@@ -12,7 +12,15 @@ export class MovieView extends React.Component<Partial<NavigationInjectedProps>>
 					<View style={styles.header}>
 						<Text style={styles.headerText}>{navigation.state.params.title}</Text>
 					</View>
-					<Text style={styles.headerText}>{navigation.state.params.year}</Text>
+					<View style={styles.body}>
+						<View style={styles.movieBox}>
+							<View style={[styles.imageDummy, styles.imageRed]}/>
+							<Text>Released in {navigation.state.params.year}</Text>
+						</View>
+					</View>
+					<View style={styles.footer}>
+						<Text>This was made with React Native.</Text>
+					</View>
 				</View>;
 	}
 }

@@ -28,7 +28,7 @@ export const styles = StyleSheet.create({
         flex: 1,
 	},
 
-	scrollBox: {
+	movieBox: {
 		justifyContent: 'center',
 		alignItems: 'center',
 		width: width,

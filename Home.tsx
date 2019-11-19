@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, Dimensions, ScrollView, TouchableHighlight } from 'react-native';
+import { Text, View, ScrollView, TouchableHighlight } from 'react-native';
 
 
 import { styles } from './Styles';
@@ -45,7 +45,7 @@ export class Home extends React.Component {
 				<ScrollView horizontal={true} showsHorizontalScrollIndicator={false} pagingEnabled={true}>
 					{this.state.movies.map(movie => (
 						<View style={styles.scrollBox} key={movie.id}>
-							<TouchableHighlight onPress={() => navigate('Movie', {title: movie.title})}>
+							<TouchableHighlight onPress={() => navigate('Movie', {title: movie.title, year: movie.releaseYear})}>
 								<View style={[styles.imageDummy, styles.imageRed]}/>
 							</TouchableHighlight>
 							<Text>{movie.title}</Text>

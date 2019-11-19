@@ -4,12 +4,6 @@ import { NavigationInjectedProps } from 'react-navigation';
 
 import { styles } from './Styles';
 
-interface IMovieProps {
-	id: String;
-	title: String;
-	year: Number;
-}
-
 export class MovieView extends React.Component<Partial<NavigationInjectedProps>> {
 
 	render() {
@@ -18,6 +12,7 @@ export class MovieView extends React.Component<Partial<NavigationInjectedProps>>
 					<View style={styles.header}>
 						<Text style={styles.headerText}>{navigation.state.params.title}</Text>
 					</View>
+					<Text style={styles.headerText}>{navigation.state.params.year}</Text>
 				</View>;
 	}
 }

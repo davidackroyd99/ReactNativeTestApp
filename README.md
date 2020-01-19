@@ -7,4 +7,4 @@ You can test it out by cloning the repo and using Expo to host the app. It has a
 ![scrolling through the gallery](https://i.imgur.com/NRGXRQL.jpg)
 
 ## The Movie View
-![viewing a movie](https://i.imgur.com/QTTYFXa_d.jpg)
+![viewing a movie](https://i.imgur.com/QTTYFX.jpg)
